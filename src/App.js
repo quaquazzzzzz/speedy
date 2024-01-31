@@ -1,10 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react';
+import './App.css';
 
-test('renders my techstarter website', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/My Techstarter Website/i);
-  expect(linkElement).toBeInTheDocument();
-});
+function App() {
+  return (
+    <div className="App">
+      <h1>My Techstarter Website</h1>
+      <p>learn react</p> {/* Füge diesen Text hinzu */}
+    </div>
+  );
+}
 
 export default App;
+
