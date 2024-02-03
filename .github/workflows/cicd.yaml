@@ -23,14 +23,10 @@ jobs:
       - run: npm test
       - name: Install AWS CLI
         uses: unfor19/install-aws-cli-action@v1
-      - name: Setup AWS Credentials
+      - name: Set up AWS CLI
         run: |
-          mkdir -p ~/.aws
-          echo "[default]
-          aws_access_key_id = ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key = ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          " > ~/.aws/credentials
-      - name: Verify AWS Credentials
-        run: |
-          aws configure list
-          aws s3 ls
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region eu-central-1
+      - name: List S3 Buckets
+        run: aws s3 ls
