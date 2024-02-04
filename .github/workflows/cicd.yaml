@@ -25,9 +25,9 @@ jobs:
         uses: unfor19/install-aws-cli-action@v1
       - name: Set up AWS CLI
         run: |
-          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          # Stelle sicher, dass die unten angegebene Region der Region deiner S3 Buckets entspricht.
+          aws configure set aws_access_key_id ${{ secrets.ASIAWQP6G4AOARBEXZ4I }}
+          aws configure set aws_secret_access_key ${{ secrets.lqwZGCxJ+d7Fhe+4jtMqm5T/V5NMHphaKR8038Lt }}
+          aws configure set session_token ${{ secrets.IQoJb3JpZ2luX2VjEL///////////wEaDGV1LWNlbnRyYWwtMSJHMEUCIQDoQA6IIyN+qc/vgrHK3nY5LaBBGIlyv1Vx4v95dKAG8QIgUg+tRproeP4Mnil+fbFs7W6GJQ+K0Ny/LJHpWb1lSzQqowMIiP//////////ARAAGgw0NDc3NDY1OTY4OTIiDPyurUP+9cEmrm2Nkyr3AuAWqeDArsehKNctIA8AGx181wChBSM8Z7s8etQXGTLGnRiejJQjWHzmLQvaHI2wlxElxja1uyQ41R43TNcQdnBpp/avq7nUdyv8xJLPQ5I5sMLLv8ivcr2HxzL+RKKQ7OxgbOlAbD88TKSihaWH1U3x+2oNj7lX6Kkj/F6LDJivSYt4D50WIyo/Vb3Y79k6MBSlKLJFTxtpDC2xF5ycun3oXo/cKICsnjb72n++Pv5hVW/UWQTygt8qGzhmrUuLJUs+cLAsgknFWKjPiVU+OreQ6hbmj/DuWad1qIacESK0ortIAaWNQZaqOOO0mdnA2btTStxihvn9Tfq4UiaukcqAC3MmrWkYAFNQD8mHcDEZdVGKaAy1YJ4Q+1UkoccZBlpERqudgkUD87/jGZCagl38/Jmkum0fhv3NrZbe9BmLcjWT2x3cQ/xKXYaBGA+zIj1cSefHd48wB1FsC51kXSqVvxMF5z6T2rbEFQfBV6pBDvCprQWAvTC14PytBjqmARJdIR3lF1o4jTwf7fh0ALjWzE/PA9MErwhsb+cxtQflPc76Xt1umskUcHgAzfe4a/uBfDwPI6uOI/wZzH98AvgOGf8YrLu7bezTQiyqZX8Qfs8d++VvEiK51Cd+heBuZR6DJvDr8U9PozvOs+58t4PPuUufJG4uUI8YyCbe4PMlr4Hw0spbPEWYMVmSHCF7G6RD+7uCtsAh09PDod4E8LyX/2l4Uxc= }}
           aws configure set default.region eu-central-1
       - name: List S3 Buckets
         run: aws s3 ls
